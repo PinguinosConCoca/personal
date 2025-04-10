@@ -79,7 +79,7 @@
         }
 
         .ml12 .letter {
-            display: inline-block;
+            /* display: inline-block; */
             line-height: 40px;
         }
 
@@ -140,7 +140,7 @@
                         <a class="nav-link me-2 shadow rounded-5 p-2" href="#about">About</a>
                     </li>
                     <li class="nav-item mt-1">
-                        <a class="nav-link shadow rounded-5 p-2" href="#contact">Contact</a>
+                        <a class="nav-link shadow rounded-5 p-2" href="#tech-stack">Tech Stack</a>
                     </li>
                 </ul>
             </div>    
@@ -157,11 +157,10 @@
         
         <!-- Contenido del Hero -->
         <div class="container d-flex flex-column justify-content-center align-items-center text-center h-100">
-            <h1 class="display-3 fw-bold text-white ml12">Innovate. Build. Succeed.</h1>
-            <p class="lead mt-3 text-white hero-text-btn">Empowering your tech journey with cutting-edge solutions.</p>
-            <a href="#features" class="btn btn-custom mt-4 hero-text-btn">Get Started</a>
+            <h1 class="display-3 fw-bold text-white ml12">Engineer. Optimize. Scale.</h1>
+            <p class="lead mt-3 text-white hero-text-btn">- I’m a Python developer, full-stack engineer & data analyst.</p>
+            <a href="https://github.com/DISTinTheHouse" class="btn btn-custom mt-4 hero-text-btn">View My Work</a>
         </div>
-
         <script>
             var textWrapper = document.querySelector('.ml12');
             textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -184,15 +183,14 @@
                 delay: (el, i) => 100 + 30 * i
             });
         </script>
-        
     </section>
 
     <!-- Features Section -->
     <section id="features" class="features-section">
         <div class="container">
             <div class="text-center mb-5 descriptions">
-                <h2 class="fw-bold">Nuestras Características</h2>
-                <p>Explora lo que nos hace diferentes.</p>
+                <h2 class="fw-bold">Core Capabilities</h2>
+                <p>Strategic technical skills that drive real business impact.</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-4">
@@ -201,8 +199,8 @@
                             <div class="icon mb-3 fw-bold">
                                 <i class="bi bi-gear-fill display-4 text-primary"></i> <!-- Ícono de Bootstrap -->
                             </div>
-                            <h5 class="fw-bold">Automatización de Procesos:</h5>
-                            <p class="mt-3">Descubre el poder de la automatización para las necesidades de tu negocio.</p>
+                            <h5 class="fw-bold">Smart Process Automation:</h5>
+                            <p class="mt-3">Streamlining operations through custom-built tools that reduce execution time and human error.</p>
                         </div>
                     </div>
                 </div>
@@ -212,8 +210,8 @@
                             <div class="icon mb-3 fw-bold">
                                 <i class="bi bi-link display-4 text-success"></i> <!-- Ícono de Bootstrap -->
                             </div>
-                            <h5 class="fw-bold">Integración perfecta:</h5>
-                            <p class="mt-3">Sincroniza tus sistemas con integraciones API seguras y eficientes.</p>
+                            <h5 class="fw-bold">Seamless API Integration:</h5>
+                            <p class="mt-3">Connecting systems through secure, scalable APIs to ensure data flow and operational consistency.</p>
                         </div>
                     </div>
                 </div>
@@ -223,8 +221,8 @@
                             <div class="icon mb-3 fw-bold">
                                 <i class="bi bi-graph-up-arrow display-4 text-danger"></i> <!-- Ícono de Bootstrap -->
                             </div>
-                            <h5 class="fw-bold">Característica 3</h5>
-                            <p class="mt-3">Analíticas en tiempo real para seguir el rendimiento.</p>
+                            <h5 class="fw-bold">Data-Driven Insights</h5>
+                            <p class="mt-3">Turning raw data into strategic decisions with real-time dashboards and automated reporting.</p>
                         </div>
                     </div>
                 </div>
@@ -232,21 +230,6 @@
         </div>
         
     </section>
-
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            ScrollReveal({ reset: true });
-        
-            ScrollReveal().reveal('.headline', { delay: 250 });
-            ScrollReveal().reveal('.hero-text-btn', { delay: 500 });
-            ScrollReveal().reveal('.descriptions', { delay: 300 }); 
-            ScrollReveal().reveal('.descriptions-cards-1', { delay: 650 });
-            ScrollReveal().reveal('.descriptions-cards-2', { delay: 950 });
-            ScrollReveal().reveal('.descriptions-cards-3', { delay: 1250 });
-            ScrollReveal().reveal('.descr-about', { delay: 150 });
-            ScrollReveal().reveal('.photo-about', { delay: 100 });
-        })       
-    </script> -->
 
     <!-- About Section -->
     <section id="about" class="features-section">
@@ -256,10 +239,19 @@
                     <h2 class="ml11">
                         <span class="text-wrapper">
                           <span class="line line1"></span>
-                          <span class="letters fw-bold">Sobre Nosotros</span>
+                          <span class="letters fw-bold">About Me</span>
                         </span>
                     </h2>
-                    <p class="mt-3 descr-about">TechWave es un proveedor líder de soluciones tecnológicas innovadoras, ayudando a empresas de todo el mundo a crecer y prosperar en la era digital.</p>
+                    <p class="mt-3 descr-about">
+                        I’m a Python Full-Stack Developer and Data Analyst with a business-first mindset.<br><br>
+                    
+                        My work spans ERP/CRM development, secure web applications, process automation, and data-driven strategy — all built with modern frameworks like Django, Next.js, and MySQL.<br><br>
+                    
+                        I’ve led logistics and system optimization projects that improved operational efficiency by over 30%, and proudly participated in the Oracle AI Workshop, applying deep learning models on real-world data using Oracle Cloud tools.<br><br>
+                    
+                        My mission is simple: build reliable, scalable, and smart solutions that help businesses grow.
+                    </p>
+                    
                 </div>                
                 <div class="col-md-6 text-center">
                     <img src="img/background-index-1.png" alt="About Image" class="img-fluid rounded-5 photo-about">
@@ -304,13 +296,119 @@
 
     </section>
 
+    <!-- Tech Stack Section (card format) -->
+    <section id="tech-stack" class="features-section">
+        <div class="container">
+        <div class="text-center mb-5 descriptions">
+            <h2 class="fw-bold">Tech Stack & Toolbox</h2>
+            <p>Strategic tools I use to build secure, scalable, and intelligent applications.</p>
+        </div>
+        <div class="row g-4">
+            
+            <!-- Python -->
+            <div class="col-md-4">
+            <div class="card card-custom p-4 text-center shadow border-0 rounded-5">
+                <div class="card-body">
+                <div class="icon mb-3 fw-bold">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" style="height: 60px;">
+                </div>
+                <h5 class="fw-bold">Python</h5>
+                <p class="mt-3">My core language for backend development, automation, and data processing.</p>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Django -->
+            <div class="col-md-4">
+            <div class="card card-custom p-4 text-center shadow border-0 rounded-5">
+                <div class="card-body">
+                <div class="icon mb-3 fw-bold">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" style="height: 60px;">
+                </div>
+                <h5 class="fw-bold">Django</h5>
+                <p class="mt-3">Framework of choice for secure, scalable, and rapid web app development.</p>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Oracle Cloud -->
+            <div class="col-md-4">
+            <div class="card card-custom p-4 text-center shadow border-0 rounded-5">
+                <div class="card-body">
+                <div class="icon mb-3 fw-bold">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/512px-Oracle_logo.svg.png" alt="Oracle Cloud" style="height: 40px; object-fit: contain; max-width: 100%;">
+                </div>
+                <h5 class="fw-bold">Oracle Cloud</h5>
+                <p class="mt-3">Oracle Cloud infrastructure used for AI, analytics, and deep learning experiments.</p>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Next.js -->
+            <div class="col-md-4">
+            <div class="card card-custom p-4 text-center shadow border-0 rounded-5">
+                <div class="card-body">
+                <div class="icon mb-3 fw-bold">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" alt="Next.js" style="height: 60px;">
+                </div>
+                <h5 class="fw-bold">Next.js</h5>
+                <p class="mt-3">Modern React framework for building fast and SEO-friendly frontends.</p>
+                </div>
+            </div>
+            </div>
+    
+            <!-- MySQL -->
+            <div class="col-md-4">
+            <div class="card card-custom p-4 text-center shadow border-0 rounded-5">
+                <div class="card-body">
+                <div class="icon mb-3 fw-bold">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" style="height: 60px;">
+                </div>
+                <h5 class="fw-bold">MySQL</h5>
+                <p class="mt-3">Reliable database engine for structured data and real-time analytics.</p>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Bootstrap -->
+            <div class="col-md-4">
+            <div class="card card-custom p-4 text-center shadow border-0 rounded-5">
+                <div class="card-body">
+                <div class="icon mb-3 fw-bold">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" style="height: 60px;">
+                </div>
+                <h5 class="fw-bold">Bootstrap</h5>
+                <p class="mt-3">CSS framework I use to design responsive, mobile-first interfaces.</p>
+                </div>
+            </div>
+            </div>
+    
+        </div>
+        </div>
+    </section>
+  
+  
+
     <!-- Footer -->
     <footer class="footer p-5" style="background: linear-gradient(to bottom, #000000, #1c1c21);">
-        <div class="container">
-            <p>&copy; 2025 Code-Canvas. Todos los derechos reservados.</p>
+        <div class="container text-center text-white">
+        <p class="mb-1 fw-bold">&copy; 2025 Code-Canvas. All rights reserved.</p>
+        <p class="mb-3">Built by <strong>Jesús Ibarra M.</strong> — Founder & Full-Stack | Software Developer</p>
+        <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap">
+            <a href="https://wa.me/5213338449486" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
+            <i class="bi bi-whatsapp" style="font-size: 1.5rem;"></i><span class="ms-2">+52 33 3844 9486</span>
+            </a>
+            <a href="https://github.com/DISTinTheHouse" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
+            <i class="bi bi-github" style="font-size: 1.5rem;"></i><span class="ms-2">GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/mddvvm-cassette/" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
+            <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i><span class="ms-2">LinkedIn</span>
+            </a>
+        </div>
         </div>
     </footer>
-
+  
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
