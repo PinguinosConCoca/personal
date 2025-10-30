@@ -4,7 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Code Canvas | Ingeniería, Automatización y Soluciones Cloud</title>
+    <meta name="description" content="Code Canvas — desarrollo de software a medida, automatización empresarial y soluciones en la nube con Python, IA y frameworks modernos. Ingeniero Jesús Ibarra.">
+    <meta name="keywords" content="software, python, desarrollo web, automatización, ERP, CRM, IA, Oracle Cloud, Django, Next.js, ingeniería de software, Jesús Ibarra, Code Canvas">
+    <meta name="author" content="Jesús Ibarra | Code Canvas">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://contactocodecanvas.netlify.app/">
+
+    <meta property="og:title" content="Code Canvas | Ingeniería, Automatización y Soluciones Cloud">
+    <meta property="og:description" content="Desarrollamos sistemas a medida y soluciones inteligentes para optimizar tu empresa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://contactocodecanvas.netlify.app/">
+    <meta property="og:image" content="https://contactocodecanvas.netlify.app/img/background-index-1.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Code Canvas | Ingeniería, Automatización y Soluciones Cloud">
+    <meta name="twitter:description" content="Desarrollo Full-Stack, automatización y soluciones Cloud con Python e IA.">
+    <meta name="twitter:image" content="https://contactocodecanvas.netlify.app/img/background-index-1.png">
+
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -410,6 +429,41 @@
   
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    /* Bloqueos básicos (contextmenu + atajos) */
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', e => {
+    const key = e.key.toUpperCase();
+    if (
+        key === 'F12' ||
+        (e.ctrlKey && key === 'U') ||               // Ctrl+U
+        (e.ctrlKey && e.shiftKey && (key === 'I' || key === 'C' || key === 'J')) // Ctrl+Shift+I/C/J
+    ) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    }
+    });
+
+    /* Detección simple de DevTools (heurística basada en dimensiones) */
+    (function detectDevTools() {
+    let open = false;
+    const threshold = 160; // ajustar según pruebas
+    setInterval(() => {
+        const widthDiff  = window.outerWidth - window.innerWidth;
+        const heightDiff = window.outerHeight - window.innerHeight;
+        const isOpen = widthDiff > threshold || heightDiff > threshold;
+        if (isOpen && !open) {
+        open = true;
+        console.warn('DevTools detected'); // acción ligera: aviso en consola
+        // Opcional: redirigir o recargar si quieres reacción más fuerte
+        // location.href = '/';
+        } else if (!isOpen && open) {
+        open = false;
+        }
+    }, 1000);
+    })();
+    </script>
 </body>
 
 </html>
