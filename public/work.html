@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work — Code Canvas</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Metadata -->
+  <meta name="description" content="Portfolio of Jesús DIST Ibarra — Software Engineer & Web Developer">
+  <meta property="og:title" content="Work — Code Canvas">
+  <meta property="og:description" content="Engineer. Optimize. Scale. Portfolio of Jesús DIST Ibarra, developer focused on innovation and automation.">
+  <meta property="og:image" content="/img/preview.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Code Canvas">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/img/favicon.ico" type="image/png">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(
+        circle at center,
+        rgba(183, 235, 255, 0.9) 0%,
+        rgba(210, 245, 255, 0.7) 25%,
+        rgba(238, 250, 255, 0.5) 50%,
+        rgba(248, 253, 255, 0.9) 85%,
+        #ffffff 100%
+      );
+      background-attachment: fixed;
+      min-height: 100vh;
+      /* opacidad y transición removidas para mostrar instantáneamente */
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: -1px;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .bg-glow::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1400px;
+      height: 1400px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(173, 226, 255, 0.7), rgba(255, 255, 255, 0.2) 70%);
+      filter: blur(100px);
+      z-index: 0;
+      will-change: transform;
+      animation: auraFlow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes auraFlow {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+        filter: blur(90px);
+      }
+      50% {
+        transform: translate(-46%, -54%) scale(1.15);
+        opacity: 1;
+        filter: blur(120px);
+      }
+      100% {
+        transform: translate(-54%, -46%) scale(1);
+        opacity: 0.8;
+        filter: blur(90px);
+      }
+    }
+    footer {
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+
+<body class="text-gray-900 relative overflow-x-hidden bg-glow">
+
+  <div id="loader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black text-white font-[Orbitron] text-center transition-all duration-700">
+    <div class="relative flex flex-col items-center animate-fadeIn">
+      
+      <!-- Círculo con spin + glow -->
+      <div class="loader-ring w-16 h-16 border-4 border-white/20 border-t-white rounded-full mb-6"></div>
+      
+      <!-- Texto de carga -->
+      <div class="space-y-1 text-sm tracking-wider animate-popText">
+        <p class="animate-pulse">Loading UI/UX Experience...</p>
+        <p class="animate-pulse delay-200">Loading Components...</p>
+        <p class="animate-pulse delay-500">Loading Static Assets...</p>
+      </div>
+
+      <!-- Flash final -->
+      <div id="flash" class="absolute w-24 h-24 bg-white/70 rounded-full blur-2xl opacity-0 pointer-events-none"></div>
+    </div>
+  </div>
+
+  <style>
+    /* ==== ANIMACIONES ==== */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes popText {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes spinPop {
+      0% { transform: rotate(0deg) scale(1); }
+      25% { transform: rotate(90deg) scale(1.05); }
+      50% { transform: rotate(180deg) scale(1); }
+      75% { transform: rotate(270deg) scale(1.08); }
+      100% { transform: rotate(360deg) scale(1); }
+    }
+
+    @keyframes flashBurst {
+      0% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1.6); }
+      100% { opacity: 0; transform: scale(2); }
+    }
+
+    /* ==== CLASES PERSONALIZADAS ==== */
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .animate-popText {
+      animation: popText 1.4s ease-in-out forwards;
+    }
+
+    .loader-ring {
+      filter: drop-shadow(0 0 15px rgba(255,255,255,0.4));
+      animation: spinPop 1.6s ease-in-out infinite;
+    }
+
+    .flash-animate {
+      animation: flashBurst 0.8s ease-out forwards;
+    }
+  </style>
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      const flash = document.getElementById('flash');
+
+      // Efecto flash antes del fade out
+      setTimeout(() => {
+        flash.classList.add('flash-animate');
+      }, 2800); // justo antes del fade
+
+      // Fade-out sincronizado
+      setTimeout(() => {
+        loader.classList.add('opacity-0', 'scale-110');
+        setTimeout(() => loader.style.display = 'none', 700);
+      }, 3500);
+    });
+  </script>
+
+  <!-- NAV -->
+  <nav class="fixed top-6 left-1/2 -translate-x-1/2 flex items-center gap-6 glass rounded-full shadow-lg px-6 py-2 z-50">
+    <a href="/index.html" class="text-gray-700 hover:text-black flex items-center gap-1 text-sm font-medium transition">
+      <i class="bi bi-house text-base"></i>
+    </a>
+    <a href="#" class="text-gray-700 hover:text-black text-sm font-medium transition">About</a>
+    <a href="#" class="text-gray-700 hover:text-black text-sm font-medium transition">Work</a>
+    <a href="#" class="text-gray-700 hover:text-black text-sm font-medium transition">Blog</a>
+    <a href="#" class="text-gray-700 hover:text-black text-sm font-medium transition">Gallery</a>
+    <div class="border-l border-gray-300/40 h-4 mx-1"></div>
+    <button class="bg-white/60 hover:bg-white/80 rounded-full p-2 shadow-sm transition">
+      <i class="bi bi-moon text-gray-700 text-sm"></i>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="min-h-screen flex flex-col justify-center px-6 md:px-16 lg:px-32 pt-24 relative z-10">
+
+    <!-- Tag -->
+    <div class="inline-flex items-center gap-1 mb-8 bg-white/40 border border-blue-200/60 
+        rounded-full px-4 py-1.5 text-sm text-gray-700 shadow-[0_4px_20px_rgba(0,0,0,0.05)] 
+        hover:shadow-[0_6px_25px_rgba(0,0,0,0.1)] transition-all duration-300 backdrop-blur-md max-w-max">
+      <span>Recent project:</span> 
+      <span class="font-semibold text-gray-900">Portal-Lazzar</span>
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-gray-900">
+      ENGINEER.<br>
+      OPTIMIZE.<br>
+      SCALE.
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="text-gray-600 text-lg max-w-2xl mb-8 leading-relaxed">
+      Hey! I'm <span class="font-semibold text-gray-900">DISTinTheHouse</span>, a passionate software engineer focused
+      on delivering innovative web experiences and backend automation solutions. 🚀
+    </p>
+
+    <!-- About Button -->
+    <div class="w-fit">
+      <a href="https://github.com/DISTinTheHouse"
+        class="group inline-flex items-center gap-3 bg-white/60 backdrop-blur-2xl border border-gray-200/60 rounded-full px-4 py-1.5 md:px-5 md:py-2 shadow-[0_4px_14px_rgba(0,0,0,0.06)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.1)] hover:scale-[1.015] transition-all duration-300">
+
+        <img src="/img/background-index-1.png" alt="Jesús DIST Ibarra"
+          class="w-7 h-7 md:w-8 md:h-8 rounded-full object-cover border border-gray-200/70 shadow-sm">
+
+        <span class="text-gray-800 text-[13px] md:text-sm font-medium tracking-tight">
+          About — Jesús ‘DIST’ Ibarra
+        </span>
+      </a>
+    </div>
+
+    <!-- Project Image -->
+    <div class="mt-20 w-full max-w-6xl rounded-3xl overflow-hidden shadow-2xl border border-gray-200 mx-auto">
+      <div class="bg-gray-900 px-4 py-2 flex items-center justify-between">
+        <div class="flex gap-2">
+          <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+          <span class="w-3 h-3 bg-yellow-400 rounded-full"></span>
+          <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+        </div>
+        <span class="text-gray-400 text-sm">Lazzar México</span>
+        <span></span>
+      </div>
+      <img src="/img/3.jpg" alt="Lazzar México Project" class="w-full">
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-10 px-6 text-gray-700 font-[Orbitron] tracking-wide bg-transparent">
+    <div class="max-w-4xl mx-auto space-y-4">
+
+      <p class="text-sm md:text-base font-semibold text-gray-800">
+        &copy; 2025 Code-Canvas. All rights reserved.
+      </p>
+
+      <p class="text-sm md:text-base text-gray-700">
+        Built by <span class="font-bold text-gray-900">Jesús Ibarra M.</span> — 
+        Software Engineer | Cloud & Automation Specialist
+      </p>
+
+      <div class="flex justify-center items-center flex-wrap gap-6 mt-4 text-gray-700">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/5213338449486" target="_blank" 
+          class="flex items-center gap-2 hover:text-emerald-600 transition">
+          <i class="bi bi-whatsapp text-lg"></i>
+          <span class="text-sm md:text-base">+52 33 3844 9486</span>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/DISTinTheHouse" target="_blank" 
+          class="flex items-center gap-2 hover:text-gray-900 transition">
+          <i class="bi bi-github text-lg"></i>
+          <span class="text-sm md:text-base">GitHub</span>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/mddvvm-cassette/" target="_blank" 
+          class="flex items-center gap-2 hover:text-sky-700 transition">
+          <i class="bi bi-linkedin text-lg"></i>
+          <span class="text-sm md:text-base">LinkedIn</span>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Entry animation removed: no JS opacity manipulation anymore -->
+  <script>
+    /* Bloqueos básicos (contextmenu + atajos) */
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', e => {
+    const key = e.key.toUpperCase();
+    if (
+        key === 'F12' ||
+        (e.ctrlKey && key === 'U') ||               // Ctrl+U
+        (e.ctrlKey && e.shiftKey && (key === 'I' || key === 'C' || key === 'J')) // Ctrl+Shift+I/C/J
+    ) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    }
+    });
+
+    /* Detección simple de DevTools (heurística basada en dimensiones) */
+    (function detectDevTools() {
+    let open = false;
+    const threshold = 160; // ajustar según pruebas
+    setInterval(() => {
+        const widthDiff  = window.outerWidth - window.innerWidth;
+        const heightDiff = window.outerHeight - window.innerHeight;
+        const isOpen = widthDiff > threshold || heightDiff > threshold;
+        if (isOpen && !open) {
+        open = true;
+        console.warn('DevTools detected'); // acción ligera: aviso en consola
+        // Opcional: redirigir o recargar si quieres reacción más fuerte
+        // location.href = '/';
+        } else if (!isOpen && open) {
+        open = false;
+        }
+    }, 1000);
+    })();
+    </script>
+</body>
+</html>
